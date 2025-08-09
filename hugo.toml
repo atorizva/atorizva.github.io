@@ -1,3 +1,44 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://atorizva.github.io"
+theme = "ficurinia"
+title = 'DataType'
+languageCode = 'en'
+defaultContentLanguage = "en"
+
+copyright = "Alfonso Toriz Vazquez - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)."
+
+summaryLength = 70  # number of words for article summaries
+
+[pagination]
+    pagerSize = 5  # number of articles per page in the index
+
+[params]
+    author = "Alfonso Toriz Vazquez"
+    description = "A blog covering topics in programming, data, mathematics, and more."
+
+    posts ="posts"
+    showPostsLink = true
+    
+    enableShareOnFediverse = true # enable a button at the end of an article to share it on the fediverse
+    fediverseAccount = "@atorizva@masto.es"
+
+[menu]
+    # these links will be added to the main navigation menu, sorted by weight
+    # other elements in this menu are added automatically from the "pages" folder
+    # the folder it will look into can be customized with the pages variable
+    # in params above
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 10
+    # these links (menu.icons) will be added as icon links below the main nav
+    [[menu.icons]]
+        identifier = "github"
+        name = "Github"
+        url = "https://github.com/atorizva"
+        weight = 10
+    [[menu.icons]]
+        identifier = "mastodon"
+        name = "Mastodon"
+        url = "https://masto.es/@atorizva"
+        weight = 20
