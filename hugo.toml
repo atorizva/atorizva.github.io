@@ -52,3 +52,8 @@ summaryLength = 70  # number of words for article summaries
         name = "Mastodon"
         url = "https://masto.es/@atorizva"
         weight = 20
+    [[menu.icons]]
+        identifier = "bluesky"
+        name = "Bluesky"
+        url = "https://bsky.app/profile/atorizva.bsky.social"
+        weight = 30
