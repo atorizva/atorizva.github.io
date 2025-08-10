@@ -1,0 +1,9 @@
+{{ with .Translations }}
+    <nav class="language-switcher">
+        {{ range . }}
+            <a{{ if eq .Language.Lang $.Language.Lang }} class="active" aria-current="page"{{ end }} href="{{ .RelPermalink }}">
+                {{ if eq .Language.Lang "es" }}🇲🇽{{ else }}🇺🇸{{ end }}
+            </a>
+        {{ end }}
+    </nav>
+{{ end }}
