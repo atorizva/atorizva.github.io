@@ -3,8 +3,18 @@ theme = "ficurinia"
 title = 'DataType'
 languageCode = 'en'
 defaultContentLanguage = "en"
-
 copyright = "Alfonso Toriz Vazquez - [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)."
+
+[languages]
+    [languages.en]
+        languageName = "English"
+        weight = 1
+        contentDir = "content/en"
+    [languages.es]
+        languageName = "Español"
+        weight = 2
+        contentDir = "content/es"
+
 
 summaryLength = 70  # number of words for article summaries
 
