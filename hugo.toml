@@ -30,6 +30,13 @@ summaryLength = 70  # number of words for article summaries
     
     enableShareOnFediverse = true # enable a button at the end of an article to share it on the fediverse
     fediverseAccount = "@atorizva@masto.es"
+    
+    logo = "/logo.svg"
+    logoAltText = "Logo"
+    favicon = "/favicon.png"
+    faviconIco = "/favicon.ico"
+    appletouch = "/apple-touch-icon.png"
+    svgicon = "/logo.svg"
 
 [menu]
     # these links will be added to the main navigation menu, sorted by weight
