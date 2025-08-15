@@ -1,0 +1,80 @@
+/* H-Card: Compact layout with fixed sizes */
+.h-card-rect {
+    display: inline-flex;
+    align-items: center;
+    border: 3px solid #f9df7f;
+    padding: 15px;
+    margin: 0;
+    width: auto;
+}
+
+.h-card-rect-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.h-card-rect-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 80%;
+    object-fit: cover;
+}
+.h-card-rect-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-width: 0;
+    flex: 1 1 0%;
+}
+.h-card-rect-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+.h-card-rect-role {
+    font-size: 1rem;
+    color: var(--text-alt, #666);
+    margin-bottom: 0.2rem;
+}
+.h-card-rect-location {
+    font-size: 0.97rem;
+    color: var(--text-alt, #888);
+}
+.h-card-rect-contact {
+    margin: 0.5rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.h-card-rect-contact a {
+    color: var(--primary, #0077cc);
+    text-decoration: none;
+    display: inline-block;
+}
+.h-card-rect-contact a:hover {
+    text-decoration: underline;
+}
+.h-card-rect-bio {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: var(--text-alt, #888);
+}
+@media (max-width: 600px) {
+    .h-card-rect {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        padding: 10px;
+    }
+    
+    .h-card-rect-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .h-card-rect-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
