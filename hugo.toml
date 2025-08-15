@@ -21,9 +21,12 @@ summaryLength = 70  # number of words for article summaries
 [pagination]
     pagerSize = 5  # number of articles per page in the index
 
+
 [params]
     author = "Alfonso Toriz Vazquez"
-    description = "A blog covering topics in programming, data, mathematics, and more."
+    email = "alfonso.toriz@tutanota.com"
+    website = "https://atorizva.github.io"
+    avatar = "/apple-touch-icon.png"
 
     posts ="posts"
     showPostsLink = true
@@ -53,14 +56,19 @@ summaryLength = 70  # number of words for article summaries
         identifier = "github"
         name = "Github"
         url = "https://github.com/atorizva"
-        weight = 10
+        weight = 40
     [[menu.icons]]
         identifier = "mastodon"
         name = "Mastodon"
         url = "https://masto.es/@atorizva"
-        weight = 20
+        weight = 30
     [[menu.icons]]
         identifier = "bluesky"
         name = "Bluesky"
         url = "https://bsky.app/profile/atorizva.bsky.social"
-        weight = 30
+        weight = 20
+    [[menu.icons]]
+        identifier = "email"
+        name = "Email"
+        url = "mailto:alfonso.toriz@.org"
+        weight = 10
