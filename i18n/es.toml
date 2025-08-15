@@ -3,3 +3,12 @@ other = "Acerca de mi"
 
 [posts]
 other = "Entradas"
+
+[profession]
+other = "Ingeniero de Datos"
+
+[country]
+other = "México"
+
+[shareOnBluesky]
+other = "Compartir en Bluesky"
