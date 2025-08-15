@@ -1,0 +1,18 @@
+<div class="h-card-rect" style="display: flex; border: 3px solid #f9df7f; padding: 15px; border-radius: 0px;">
+  <div style="flex-shrink: 0; margin-right: 20px;">
+    <img class="h-card-rect-avatar" src="{{ .Site.Params.avatar | default "/images/avatar.jpg" }}" alt="Profile photo" style="width: 100px; height: 100px; border-radius: 50%;" />
+  </div>
+  <div class="h-card-rect-info" style="display: flex; flex-direction: column; justify-content: center;">
+    <div class="h-card-rect-name" style="font-weight: bold; font-size: 1.2em;">{{ .Site.Params.author | default "Author Name" }}</div>
+    <div class="h-card-rect-role">{{ i18n "profession" }}</div>
+    <div class="h-card-rect-location">{{ i18n "country" }}</div>
+    <div>
+    {{ range .Site.Params.links }}
+        {{- partial "nerdlink" . -}}
+    {{ end }}
+    {{ range .Site.Menus.icons }}
+        {{- partial "iconlink" . -}}
+    {{ end }}
+    </div>
+  </div>
+</div>
