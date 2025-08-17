@@ -1,5 +1,5 @@
 baseURL = "https://atorizva.github.io"
-theme = "ficurinia"
+theme = "nostyleplease"
 title = 'DataType'
 languageCode = 'es'
 defaultContentLanguage = "es"
@@ -21,6 +21,32 @@ summaryLength = 70  # number of words for article summaries
 [pagination]
     pagerSize = 5  # number of articles per page in the index
 
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.parser]
+            [markup.goldmark.parser.attribute]
+                block = true
+                title = true
+
+    [markup.highlight]
+        anchorLineNos      = false 
+        codeFences         = true 
+        guessSyntax        = false
+        hl_Lines           = ''
+        hl_inline          = false 
+        lineAnchors        = ''
+        lineNoStart        = 1
+        lineNos            = true
+        lineNumbersInTable = false 
+        noClasses          = true
+        noHl               = false
+        style              = 'friendly'
+        tabWidth           = 4
+
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel   = 3
+        ordered    = false
 
 [params]
     author = "Alfonso Toriz Vazquez"
@@ -40,6 +66,12 @@ summaryLength = 70  # number of words for article summaries
     faviconIco = "/favicon.ico"
     appletouch = "/apple-touch-icon.png"
     svgicon = "/logo.svg"
+
+    [params.theme_config]
+        show_description = true
+        appearance = "light"
+        back_home_text = "cd .."
+        date_format = "02 Jan 2006"
 
 [menu]
     # these links will be added to the main navigation menu, sorted by weight
