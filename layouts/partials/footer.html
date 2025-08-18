@@ -1,0 +1,9 @@
+<footer class="site-footer">
+    {{/* Access the 'copyright' and 'author' variables */}}
+    <p>
+        {{ now.Format "2006" }} &copy; {{ .Site.Params.author }} 
+        <br>
+        {{ i18n "copyrightNotice" | safeHTML }} 
+        {{ i18n "codeLicenseNotice" | safeHTML }} 
+    </p>
+</footer>
