@@ -9,3 +9,9 @@ other = "Mexico"
 
 [shareOnBluesky]
 other = "Share on Bluesky"
+
+[copyrightNotice]
+other = "Posts are licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA</a>."
+
+[codeLicenseNotice]
+other = "Code is licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>AGPLv3</a>."

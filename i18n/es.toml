@@ -12,3 +12,9 @@ other = "México"
 
 [shareOnBluesky]
 other = "Compartir en Bluesky"
+
+[copyrightNotice]
+other = "Todas las entradas están licenciadas bajo <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA</a>."
+
+[codeLicenseNotice]
+other = "Todo el código está licenciado bajo <a href='https://www.gnu.org/licenses/agpl-3.0.html'>AGPLv3</a>."
