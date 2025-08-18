@@ -4,7 +4,7 @@
             {{- with $item.url -}}
                 {{- $translatedTitle := i18n $item.title -}}
                 {{- $displayTitle := cond (eq $translatedTitle "") $item.title $translatedTitle -}}
-                <a href="{{ $item.url | relURL }}">{{ safeHTML $displayTitle }}</a>
+                <a href="{{ $item.url | relURL | relLangURL }}">{{ safeHTML $displayTitle }}</a>
             {{- else -}}
                 {{- $translatedTitle := i18n $item.title -}}
                 {{- $displayTitle := cond (eq $translatedTitle "") $item.title $translatedTitle -}}
