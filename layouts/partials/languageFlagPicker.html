@@ -2,7 +2,7 @@
     <nav class="language-switcher">
         {{ range . }}
             <a{{ if eq .Language.Lang $.Language.Lang }} class="active" aria-current="page"{{ end }} href="{{ .RelPermalink }}">
-                {{ if eq .Language.Lang "es" }}🇲🇽{{ else }}🇺🇸{{ end }}
+                {{ if eq .Language.Lang "es" }}Cambiar idioma 🇲🇽{{ else }}Change language 🇺🇸{{ end }}
             </a>
         {{ end }}
     </nav>
