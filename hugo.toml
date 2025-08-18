@@ -40,7 +40,7 @@ summaryLength = 70  # number of words for article summaries
         lineNumbersInTable = false 
         noClasses          = true
         noHl               = false
-        style              = 'friendly'
+        style              = 'github' 
         tabWidth           = 4
 
     [markup.tableOfContents]
