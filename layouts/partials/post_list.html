@@ -1,0 +1,25 @@
+{{- $posts := where site.RegularPages "Type" "ne" "page" -}}
+
+{{- if .section -}}
+    {{- $posts = where $posts "Section" .section -}}
+{{- end -}}
+
+{{- $limit_exceeded := false -}}
+{{- if and .limit (gt (len $posts) .limit) -}}
+    {{- $limit_exceeded = true -}}
+    {{- $posts = first .limit $posts -}}
+{{- end -}}
+
+{{- if gt (len $posts) 0 -}}
+<ul>
+    {{- range $post := $posts -}}
+    <li>
+        <span>{{ $post.Date | time.Format site.Params.theme_config.date_format }}</span>
+        <a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
+    </li>
+    {{- end -}}
+    {{- if and .show_more $limit_exceeded -}}
+        <li><a href="{{ .show_more_url | relURL }}">{{ .show_more_text | default "Show more..." }}</a></li>
+    {{- end -}}
+</ul>
+{{- end -}}
