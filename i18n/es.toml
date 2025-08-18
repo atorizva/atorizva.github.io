@@ -1,8 +1,11 @@
 [about]
-other = "Acerca de mi"
+other = "sobre mi"
 
-[posts]
-other = "Entradas"
+[all_posts]
+other = "todas las entradas"
+
+[posts_by_category]
+other = "entradas por categoría"
 
 [profession]
 other = "Ingeniero de Datos"

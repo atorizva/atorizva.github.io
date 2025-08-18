@@ -1,5 +1,11 @@
 [about]
-other = "About me"
+other = "about me"
+
+[all_posts]
+other = "all posts"
+
+[posts_by_category]
+other = "posts by category"
 
 [profession]
 other = "Data Engineer"
