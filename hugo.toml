@@ -39,8 +39,9 @@ defaultContentLanguage = "es"
         weight = 2
         contentDir = "content/es"
 
-
-summaryLength = 70  # number of words for article summaries
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
 
 [pagination]
     pagerSize = 5  # number of articles per page in the index
