@@ -65,7 +65,7 @@ defaultContentLanguage = "es"
         lineNumbersInTable = false 
         noClasses          = true
         noHl               = false
-        style              = 'github' 
+        style              = 'gruvbox-light' 
         tabWidth           = 4
 
     [markup.tableOfContents]
