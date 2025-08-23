@@ -1,24 +1,12 @@
-name: Deploy Hugo Website
+name: Build and deploy website to GitHub Pages
 
 on:
-    push:
-        branches: [main]
     pull_request:
         branches: [main]
-    workflow_dispatch:
-
-permissions:
-    contents: write 
-    pages: write
-    id-token: write
 
 concurrency:
     group: "pages"
     cancel-in-progress: false 
-
-defaults:
-    run:
-        shell: bash
 
 jobs:
     build:
@@ -27,7 +15,7 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
               with:
-                  submodules: true
+                  submodules: true  # Fetch Hugo themes 
                   fetch-depth: 0
 
             - name: Set up Hugo
@@ -39,9 +27,23 @@ jobs:
             - name: Build Hugo site
               run: hugo --minify
 
-            - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v3
-              if: github.ref == 'refs/heads/main'
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./public
+                  name: public
+            
+    deploy:
+        needs: build
+        permissions:
+            contents: write         
+            pages: write
+            id-token: write
+        environment:
+            name: github-pages 
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
