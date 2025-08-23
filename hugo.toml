@@ -8,20 +8,13 @@ defaultContentLanguage = "es"
     author = "Alfonso Toriz Vazquez"
     email = "alfonso.toriz@tutanota.com"
     website = "https://atorizva.github.io"
-    avatar = "/apple-touch-icon.png"
+    favicon = "favicon.svg" # path to the favicon, relative to the "static" folder
 
     posts ="posts"
     showPostsLink = true
     
     enableShareOnFediverse = true # enable a button at the end of an article to share it on the fediverse
     fediverseAccount = "@atorizva@masto.es"
-    
-    logo = "/logo.svg"
-    logoAltText = "Logo"
-    favicon = "/favicon.png"
-    faviconIco = "/favicon.ico"
-    appletouch = "/apple-touch-icon.png"
-    svgicon = "/logo.svg"
 
     [params.theme_config]
         show_description = true
