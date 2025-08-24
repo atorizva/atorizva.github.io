@@ -8,9 +8,5 @@
     class="nerdlink"
     href="{{ .URL | safeURL }}">
     {{ $icon := index site.Data.supported_icons (lower .Identifier) | safeHTML }}
-    {{ if $icon }}
-        {{ $icon | safeHTML }}
-    {{ else }}
-        {{ .Name }}
-    {{ end }}
+    {{ $icon | safeHTML | default .Name }}
 </a>

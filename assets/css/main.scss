@@ -179,3 +179,7 @@ details[open] summary {
 .toc {
   padding: 1rem;
 }
+
+.nerdlink:has(> svg) {
+  text-decoration: none; /* removes underline for links containing SVG */
+}
