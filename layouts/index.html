@@ -2,7 +2,6 @@
 
 <header>
     <h1>{{ $.Site.Title }}</h1>
-    {{ partial "languageFlagPicker.html" . }}
     {{- if $.Site.Params.theme_config.show_description -}}
         {{ i18n "description" | safeHTML }}
     {{- end -}}

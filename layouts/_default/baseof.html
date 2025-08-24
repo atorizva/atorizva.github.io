@@ -4,12 +4,27 @@
     <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
         <main class="page-content" aria-label="Content">
             <div class="w">
-                {{- block "main" . }}{{- end }}
+                {{ partial "languageFlagPicker" . }}
                 {{ if not .IsHome }}
-                    {{ partial "share_on_bluesky.html" . }}
+                    <div class="post-meta">
+                        {{ partial "back_link.html" .}}
+                        <p>
+                            <time datetime="{{ .Date }}">
+                                {{ .Date | time.Format site.Params.theme_config.date_format }}
+                            </time>
+                        </p>
+                    </div>
                 {{ end}}
+                {{- block "main" . }}{{- end }}
+                {{ partial "share_on_bluesky.html" . }}
                 {{ partial "footer.html" . }}
             </div>
         </main>
     </body>
+    {{- if .Params.custom_js -}}
+        {{- range .Params.custom_js -}}
+            {{ $js := resources.Get (print "js/" . ".js") }}
+            <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+        {{- end -}}
+    {{- end -}}
 </html>
