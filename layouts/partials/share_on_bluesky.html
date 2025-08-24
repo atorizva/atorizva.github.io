@@ -1,0 +1,14 @@
+{{ if site.Params.enableShareOnBluesky | default false }}
+    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="shareOnBluesky();">
+        {{ i18n "shareOnBluesky" }}
+    </a>
+    <script>
+        var articleTitle = '{{ .Title }}';
+        var articleLink = '{{ .Permalink }}';
+        
+        function shareOnBluesky() {
+            const text = encodeURIComponent(articleTitle + ' ' + articleLink);
+            window.open(`https://bsky.app/intent/compose?text=${text}`, '_blank');
+        }
+    </script>
+{{ end }}

@@ -15,8 +15,7 @@ defaultContentLanguage = "es"
     posts ="posts"
     showPostsLink = true
     
-    enableShareOnFediverse = true # enable a button at the end of an article to share it on the fediverse
-    fediverseAccount = "@atorizva@masto.es"
+    enableShareOnBluesky= true 
 
     [params.theme_config]
         show_description = true
