@@ -7,9 +7,6 @@
     <div class="h-card-rect-role">{{ i18n "profession" }}</div>
     <div class="h-card-rect-location">{{ i18n "country" }}</div>
     <div>
-    {{ range .Site.Params.links }}
-        {{- partial "nerdlink" . -}}
-    {{ end }}
     {{ range .Site.Menus.icons }}
         {{- partial "iconlink" . -}}
     {{ end }}
