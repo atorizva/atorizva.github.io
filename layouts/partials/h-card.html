@@ -1,6 +1,6 @@
-<div class="h-card-rect" style="display: flex; border: 3px solid #f9df7f; padding: 15px; border-radius: 0px;">
+<div class="h-card-rect" style="display: flex; border: 3px solid #fef3c7; padding: 15px; border-radius: 0px;">
   <div style="flex-shrink: 0; margin-right: 20px;">
-    <img class="h-card-rect-avatar" src="{{ .Site.Params.avatar | default "/images/avatar.jpg" }}" alt="Profile photo" style="width: 100px; height: 100px; border-radius: 50%;" />
+    <img class="h-card-rect-avatar" src="{{ (.Site.Params.avatar | default "/images/avatar.jpg") | relURL }}" alt="Profile photo" style="width: 100px; height: 100px; border-radius: 50%;" />
   </div>
   <div class="h-card-rect-info" style="display: flex; flex-direction: column; justify-content: center;">
     <div class="h-card-rect-name" style="font-weight: bold; font-size: 1.2em;">{{ .Site.Params.author | default "Author Name" }}</div>
