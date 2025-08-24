@@ -8,7 +8,9 @@ defaultContentLanguage = "es"
     author = "Alfonso Toriz Vazquez"
     email = "alfonso.toriz@tutanota.com"
     website = "https://atorizva.github.io"
-    favicon = "favicon.svg" # path to the favicon, relative to the "static" folder
+    favicon = "favicon.svg" 
+    avatar = "avatar.png"
+    
 
     posts ="posts"
     showPostsLink = true
@@ -84,11 +86,6 @@ defaultContentLanguage = "es"
         name = "Github"
         url = "https://github.com/atorizva"
         weight = 40
-    [[menu.icons]]
-        identifier = "mastodon"
-        name = "Mastodon"
-        url = "https://masto.es/@atorizva"
-        weight = 30
     [[menu.icons]]
         identifier = "bluesky"
         name = "Bluesky"

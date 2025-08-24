@@ -1,5 +1,5 @@
 <footer class="site-footer">
-    {{/* Access the 'copyright' and 'author' variables */}}
+    {{ partial "h-card.html" .}}
     <p>
         {{ now.Format "2006" }} &copy; {{ .Site.Params.author }} 
         <br>
