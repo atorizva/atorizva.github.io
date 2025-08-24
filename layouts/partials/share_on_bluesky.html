@@ -1,5 +1,8 @@
 {{ if site.Params.enableShareOnBluesky | default false }}
-    <a style="margin-bottom: 24px; display: inline-block;" class="shareBtn" onclick="shareOnBluesky();">
+    <a
+        style="margin-bottom: 24px; display: inline-block; cursor: pointer;"
+        class="shareBtn"
+        onclick="shareOnBluesky();">
         {{ i18n "shareOnBluesky" }}
     </a>
     <script>
