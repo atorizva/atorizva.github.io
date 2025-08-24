@@ -16,7 +16,9 @@
                     </div>
                 {{ end}}
                 {{- block "main" . }}{{- end }}
-                {{ partial "share_on_bluesky.html" . }}
+                {{ if not .IsHome}}
+                    {{ partial "share_on_bluesky.html" . }}
+                {{ end }}
                 {{ partial "footer.html" . }}
             </div>
         </main>
