@@ -18,7 +18,7 @@ defaultContentLanguage = "es"
     enableShareOnBluesky= true 
 
     [params.theme_config]
-        show_description = true
+        show_description = false 
         appearance = "light"
         back_home_text = "cd .."
         date_format = "02 Jan 2006"
